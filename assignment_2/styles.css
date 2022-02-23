@@ -1,0 +1,38 @@
+body,
+html {
+    background-color: #41B5DB;
+    font-family: "monaco";
+}
+
+.button {
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    font-size: 1em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameInfo {
+    font-size: 2em;
+}
+
+#board {
+    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 100px;
+    background-color: #41B5DB;
+}
+
+#game {
+    font-size: 3em;
+}
