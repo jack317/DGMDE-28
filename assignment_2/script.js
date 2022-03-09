@@ -123,7 +123,7 @@ function buildGrid() {
 
 // Set the board state back to all defaults
 function restartGame() {
-    for (i=0; i <= 8; i++) {
+    for (i = 0; i <= 8; i++) {
         board[i] = 0;
         document.getElementById(i).innerHTML = "";
     }
