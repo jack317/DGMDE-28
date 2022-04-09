@@ -29,7 +29,7 @@ window.onload = function () {
 // API call to generate random words random words
 // Reference: https://developer.wordnik.com/
 async function getRandomWord() {
-    let response = await fetch('http://api.wordnik.com/v4/words.json/randomWord?api_key=xya6zr0xy0u8hs4rdcdvs0jrwp0ajmm0ywag6yvwolquidtbq&minLength=5&maxLength=5&hasDictionaryDef=true&minDictionaryCount=5')
+    let response = await fetch('http://api.wordnik.com/v4/words.json/randomWord?api_key=xya6zr0xy0u8hs4rdcdvs0jrwp0ajmm0ywag6yvwolquidtbq&minLength=5&maxLength=5&hasDictionaryDef=true&minDictionaryCount=5&excludePartOfSpeech=proper-noun-plural, proper-noun-possesive, proper-noun')
     let data = await response.json()
     return data;
 }
@@ -68,12 +68,12 @@ class NewGuess {
                 info.appendChild(node)
                 current_cell.style.backgroundColor = "#11F71D";
             } else if (this.word_parsed.includes(this.guess_parsed[i])) {
-                current_cell.innerHTML = `${this.guess_name[i]}` 
+                current_cell.innerHTML = `${this.guess_name[i]}`
                 node.appendChild(document.createTextNode(`${this.guess_name[i]} is in the word`))
                 info.appendChild(node)
                 current_cell.style.backgroundColor = "#F7E111";
             } else {
-                current_cell.innerHTML = `${this.guess_name[i]}` 
+                current_cell.innerHTML = `${this.guess_name[i]}`
                 node.appendChild(document.createTextNode(`${this.guess_name[i]} is not in the word`))
                 info.appendChild(node)
                 current_cell.style.backgroundColor = "#D96909";
@@ -90,7 +90,7 @@ class NewGuess {
 }
 
 function submitGuess(word, guess) {
-    if (guess.length != 5){
+    if (guess.length != 5) {
         info.innerHTML = "Your Guess Needs to be 5 letters!";
         return false
     }
@@ -152,7 +152,7 @@ function restartGame() {
 function results(outcome) {
     var node = document.createElement('li');
     if (outcome) {
-        node.appendChild(document.createTextNode(`You Won in ${tries} turns`));
+        node.appendChild(document.createTextNode(`You Won on turn ${tries + 1}`));
         results_list.appendChild(node);
         wins = wins + 1;
         document.getElementById("wins").innerHTML = wins;
