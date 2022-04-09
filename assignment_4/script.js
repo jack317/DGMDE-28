@@ -145,6 +145,7 @@ function restartGame() {
     letters_info.innerHTML = "";
     guess_input.value = "";
     document.getElementById("guess").style.display = 'block';
+    restart.style.display = 'none';
 }
 
 // Track wins and losses

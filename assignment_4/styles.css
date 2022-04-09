@@ -4,6 +4,7 @@ html {
     font-family: "monaco";
 }
 
+/* utilized flex for responsiveness on different sized devices */
 .letter_tile {
     height: 10vw;
     width: 10vw;

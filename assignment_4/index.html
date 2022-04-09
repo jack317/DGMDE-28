@@ -14,7 +14,7 @@
         <div id="secret_word"></div>
         <div id="win_status"></div>
         <div id="board"></div>
-        
+
     </div>
     <div class="container game-controls">
         <div class="row">
@@ -23,19 +23,20 @@
                 <input type="checkbox" id="debug-mode" name="debug-mode" value="false">
                 <div class="row">Results</div>
                 <div class="col">Wins:</div>
-                    <div id="wins">0</div>
+                <div id="wins">0</div>
                 <div class="col">Losses:</div>
-                    <div id="losses">0</div>
+                <div id="losses">0</div>
                 <ol id="results"></ol>
             </div>
             <div class="col">
                 <button id="restart">play again</button>
                 <label for="menu-items">What's your guess?</label>
-                <input type="text" class="menu-items" id="guess_input" minlength="5" maxlength="5" onkeyup="this.value = this.value.replace(/[^a-z]/, '')">
+                <input type="text" class="menu-items" id="guess_input" minlength="5" maxlength="5"
+                    onkeyup="this.value = this.value.replace(/[^a-z]/, '')">
                 <button type="button" id="guess">Guess</button>
                 <ul id="info"></ul>
             </div>
-            <div class = "col">
+            <div class="col">
                 <div class="gameInfo" id="turn">Letters Used So Far:</div>
                 <div class="gameInfo" id="used_letters"></div>
             </div>
