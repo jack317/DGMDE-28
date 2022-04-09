@@ -1,0 +1,57 @@
+body,
+html {
+    background-color: #41B5DB;
+    font-family: "monaco";
+}
+
+.letter_tile {
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    font-size: 1em;
+    border: 1px solid black;
+}
+
+.game-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameInfo {
+    font-size: 1em;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 50%;
+    align-items: center;
+}
+
+#board {
+    width: 55vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 100px;
+    background-color: #41B5DB;
+}
+
+#game {
+    font-size: 3em;
+}
+
+#restart {
+    margin-left: 13em;
+    width: 10em;
+    height: 3em;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
