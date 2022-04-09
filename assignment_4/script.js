@@ -29,7 +29,7 @@ window.onload = function () {
 // API call to generate random words random words
 // Reference: https://developer.wordnik.com/
 async function getRandomWord() {
-    let response = await fetch('http://api.wordnik.com/v4/words.json/randomWord?api_key=xya6zr0xy0u8hs4rdcdvs0jrwp0ajmm0ywag6yvwolquidtbq&minLength=5&maxLength=5&hasDictionaryDef=true&minDictionaryCount=5&excludePartOfSpeech=proper-noun-plural, proper-noun-possesive, proper-noun')
+    let response = await fetch('https://api.wordnik.com/v4/words.json/randomWord?api_key=xya6zr0xy0u8hs4rdcdvs0jrwp0ajmm0ywag6yvwolquidtbq&minLength=5&maxLength=5&hasDictionaryDef=true&minDictionaryCount=5&excludePartOfSpeech=proper-noun-plural, proper-noun-possesive, proper-noun')
     let data = await response.json()
     return data;
 }
