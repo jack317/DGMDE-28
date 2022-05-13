@@ -20,6 +20,7 @@ from final_project import views
 
 router = routers.DefaultRouter()
 router.register('Paragraph', views.ParagraphView)
+router.register('Saved', views.SavedView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

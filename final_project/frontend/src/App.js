@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import './App.css';
-import Interpreter from "./components/Interpreter"
-// import MadLibLoad from './paragraphLoad';
-// import axios from "axios";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar"
+import Add from "./pages/navbar/Add"
+import Home from "./pages/Home";
 
 class App extends Component {
   constructor(props) {
@@ -12,12 +12,19 @@ class App extends Component {
     };
   }
 
+  // Main app page with routes to Home and Add page
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-         <Interpreter />
-        </header>
+        <Router>
+          <Navbar />
+          <header className="App-header">
+          <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/add' element={<Add/>}></Route>
+          </Routes>
+          </header>
+        </Router>
       </div>
     );
   }

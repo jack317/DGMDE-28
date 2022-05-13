@@ -6,3 +6,10 @@ class Paragraph(models.Model):
 
     def _str_(self):
         return self.title 
+
+class Saved(models.Model):
+    title_saved = models.CharField(max_length=120)
+    body_saved = models.TextField()
+
+    def _str_(self):
+        return self.title 

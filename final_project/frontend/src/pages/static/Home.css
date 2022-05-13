@@ -1,0 +1,25 @@
+.madlib-title {
+    font-size: 1.2em;
+}
+
+.madlib-text {
+    font-size: .8em;
+}
+
+.madlib-button {
+    align-self: center;
+    background-color: #FF9F04;
+}
+
+.blankSpace {
+    font-size: .5em;
+}
+
+.main-card{
+    border-radius: 1.8em;
+    background-color: #B6BFFA;
+}
+
+.madlib-paragraphs{
+    display:inline-block;
+}
